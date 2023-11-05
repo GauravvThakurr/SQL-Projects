@@ -1,5 +1,9 @@
 # Music Store SQL Analysis
 
+## Problem Statement 
+A music retailer aims to identify key factors for enhancing its business performance, diagnosing existing operational challenges, identifying high-value customer segments, and obtaining valuable insights for innovative marketing and initiatives. We will utilize SQL, a database query language, to tackle these tasks
+
+
 ## Database and Tools
 * Postgre SQL
 * PgAdmin4
