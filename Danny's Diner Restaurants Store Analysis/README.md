@@ -1,6 +1,6 @@
 # 🍜 Case Study #1: Danny's Diner 
 
-<img width="555" alt="Screenshot 2023-09-30 175658" src="https://github.com/GauravvThakurr/Case-Studies-SQL/assets/141028751/9aab3ee1-8470-4ec2-a14b-5ee326799165">
+<img width="513" alt="Screenshot 2023-11-06 175747" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/4cc5414a-b32b-4ea8-9c66-2e484eaa41ec">
 
 ***
 
