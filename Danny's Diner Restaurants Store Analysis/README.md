@@ -1,6 +1,6 @@
 # 🍜 Case Study #1: Danny's Diner 
-<img width="568" alt="Screenshot 2023-11-06 221800" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/4869b0c9-fcf4-4b95-8c11-4cca03626cad">
 
+<img width="580" alt="Screenshot 2023-11-06 225103" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/5e1659c3-4317-434e-b8f3-9b62dc14314a">
 
 ***
 
@@ -10,7 +10,8 @@ Danny aims to enhance customer experiences and assess the expansion of his loyal
 ***
 
 ## 📍Entity Relationship Diagram
-<img width="503" alt="image" src="https://github.com/GauravvThakurr/Case-Studies-SQL/assets/141028751/5f85a30f-5495-45bd-a782-0297e8f60683">
+
+<img width="568" alt="Screenshot 2023-11-06 221800" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/4869b0c9-fcf4-4b95-8c11-4cca03626cad">
 
 ***
 
