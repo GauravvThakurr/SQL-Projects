@@ -39,7 +39,8 @@ ORDER BY SUM(m.price) DESC;
 
 
 #### 🎯Insights
-<img width="359" alt="image" src="https://github.com/GauravvThakurr/Case-Studies-SQL/assets/141028751/8ff9d1f7-e979-4378-bc54-6b0ac23ec116">
+<img width="585" alt="Screenshot 2023-11-07 125434" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/353c9d9f-564f-40a4-bcaa-05818de89c1a">
+
 
 - Customer_Id A spents total of $76
 - Customer_id B spents total of$74
@@ -61,7 +62,8 @@ GROUP BY customer_id;
 - To find unique visits use  `COUNT(DISTINCT order_date)` than group by `customer_id` 
 
 #### 🎯Insights
-<img width="255" alt="image" src="https://github.com/GauravvThakurr/Case-Studies-SQL/assets/141028751/bb1e6992-1176-4bb7-978d-3b2d5eb6b769">
+<img width="489" alt="Screenshot 2023-11-07 125550" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/4e28d8bf-317a-45b0-b3db-6cce4b33dc91">
+
 
 - Customer_Id A visited 4 times
 - Customer_Id B visited 6 times
@@ -99,7 +101,8 @@ GROUP BY customer_id,
 - Group them all
 
 #### 🎯Insights
-<img width="289" alt="image" src="https://github.com/GauravvThakurr/Case-Studies-SQL/assets/141028751/dbce16a3-bf80-4fc9-b389-8383772d6afb">
+<img width="539" alt="Screenshot 2023-11-07 125658" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/3351dd3a-8bae-445b-9802-d7650a4c0f14">
+
 
 - Customer_id A brought Sushi and curry
 - Customer_id B ordered curry
@@ -139,7 +142,8 @@ order by o.customer_id
 - Using subquery and CTE we found how many times each customer ordered most ordered product
 - 
 #### 🎯Insights
-<img width="351" alt="Screenshot 2023-10-19 124616" src="https://github.com/GauravvThakurr/Case-Studies-SQL/assets/141028751/6e379184-921e-4923-9a01-8e7716e41585">
+<img width="706" alt="Screenshot 2023-11-07 125836" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/03fbc385-fb95-466f-9a63-190b2cc39cc5">
+
 
 - Customer_id A placed 3 ramen order
 - Customer_id B placed 2 ramen order
@@ -169,7 +173,8 @@ order by r.no_order desc
 - In main query we join `Menu` table for to pull names of product and used `r.rn = 1` to pull only the top order from each customer
   
 #### 🎯Insights
-<img width="354" alt="Screenshot 2023-10-19 125827" src="https://github.com/GauravvThakurr/Case-Studies-SQL/assets/141028751/7502df9e-b080-4678-a790-96db7eb62a29">
+<img width="595" alt="Screenshot 2023-11-07 132041" src="https://github.com/GauravvThakurr/SQL-projects/assets/141028751/0bc724ba-c7d6-480c-b9a2-4d6fd6174a60">
+
 
 ***
 
