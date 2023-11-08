@@ -1,1 +1,5 @@
-# I upload my SQL projects here
+# SQL projects
+
+***
+
+## I upload every project related to SQL here.
