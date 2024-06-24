@@ -1,8 +1,8 @@
-# Pizza Sales Store Analysis
+# Pizza Store Sale Analysis
 
-code
+## Code
+
 ````sql
-
 -- Retrieve the total number of orders placed.
 
 SELECT 
@@ -77,8 +77,11 @@ ORDER BY qty_ordered DESC
 
 -- Determine the distribution of orders by hour of the day.
 
-select hour(time) as hours, count(*) as orders_placed from orders
-group by hours
+SELECT 
+    HOUR(time) AS hours, COUNT(*) AS orders_placed
+FROM
+    orders
+GROUP BY hours
 
 
 -- Join relevant tables to find the category-wise distribution of pizzas.
@@ -163,9 +166,6 @@ ORDER BY
     select dates, sum(revenue) over (order by dates asc) cumulative_revenue
     from cte
 
-use pizza
-
-
 
 
 -- Determine the top 3 most ordered pizza types based on revenue for each pizza category.
@@ -178,5 +178,64 @@ inner join order_details o on o.pizza_id = p.pizza_id
 group by pizza_type, pizza_name
 )
 select pizza_type, pizza_name, revenue from cte
-where rnk < 4
+where rnk < 4 
+
+
+-- Find the Least Popular Pizza in Each Category
+select pizza_type, pizza_name, total_qty from (select t.category as pizza_type, t.name as pizza_name, sum(d.quantity) total_qty,
+dense_rank() over(partition by t.category order by sum(d.quantity) ) as qty_ordered
+from order_details d
+inner join pizzas p on p.pizza_id = d.pizza_id
+inner join pizza_types t on t.pizza_type_id = p.pizza_type_id
+group by pizza_type, pizza_name
+) t1
+where qty_ordered = 1
+
+-- Find the Average Time Between Orders
+
+SELECT 
+    AVG(time_diff) / 60 AS avg_time_diff_minutes
+FROM (
+    SELECT 
+        o.date,
+        o.order_id,
+        o.time,       
+         LAG(o.time) OVER (PARTITION BY o.date ORDER BY o.time) AS time_diffs, 
+         TIME_TO_SEC(TIMEDIFF(o.time, LAG(o.time) OVER (PARTITION BY o.date ORDER BY o.time))) AS time_diff
+    FROM 
+        orders o
+) AS time_diffs
+WHERE 
+    time_diff IS NOT NULL;
+
+-- Identify Pizzas That Have Never Been Ordered
+SELECT 
+    p.pizza_id,
+    pt.name AS pizza_name
+FROM 
+    pizzas p
+INNER JOIN 
+    pizza_types pt ON p.pizza_type_id = pt.pizza_type_id
+LEFT JOIN 
+    order_details od ON p.pizza_id = od.pizza_id
+WHERE 
+    od.pizza_id IS NULL;
+
+-- Find the Day with the Highest Total Revenue
+
+SELECT 
+    o.date,
+    SUM(p.price * od.quantity) AS total_revenue
+FROM 
+    orders o
+INNER JOIN 
+    order_details od ON o.order_id = od.order_id
+INNER JOIN 
+    pizzas p ON od.pizza_id = p.pizza_id
+GROUP BY 
+    o.date
+ORDER BY 
+    total_revenue DESC
+LIMIT 1;
 ````
+
