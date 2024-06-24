@@ -214,6 +214,7 @@ WHERE
     time_diff IS NOT NULL;
 
 -- Identify Pizzas That Have Never Been Ordered
+
 SELECT 
     p.pizza_id,
     pt.name AS pizza_name
@@ -242,5 +243,6 @@ GROUP BY
 ORDER BY 
     total_revenue DESC
 LIMIT 1;
+
 ````
 
