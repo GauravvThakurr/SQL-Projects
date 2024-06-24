@@ -1,5 +1,10 @@
 # Pizza Store Sale Analysis
 
+Table1: Pizzas
+Table2: Pizza_type
+Table3: orders
+Table4: order_details
+
 ## Code
 
 ````sql
